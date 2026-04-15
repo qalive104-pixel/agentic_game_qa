@@ -1,0 +1,21 @@
+{
+    "mode": "pvp",
+    "feature": "weapon switching",
+    "test_cases": [
+        {
+            "title": "Verify weapon switching works during standard PvP combat",
+            "type": "positive",
+            "priority": "high"
+        },
+        {
+            "title": "Verify weapon switching handles disconnects or lag correctly",
+            "type": "negative",
+            "priority": "high"
+        },
+        {
+            "title": "Verify weapon switching remains fair for both players",
+            "type": "edge case",
+            "priority": "medium"
+        }
+    ]
+}
