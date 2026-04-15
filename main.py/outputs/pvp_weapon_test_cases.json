@@ -1,0 +1,50 @@
+{
+    "mode": "pvp",
+    "feature": "weapon",
+    "test_cases": [
+        {
+            "title": "Verify weapon works during standard PvP combat",
+            "type": "positive",
+            "priority": "high",
+            "severity": "critical",
+            "precondition": "Two players are matched successfully and the PvP match is active.",
+            "steps": [
+                "Start a PvP match.",
+                "Use or trigger weapon during normal combat.",
+                "Observe gameplay response for both players.",
+                "Verify UI and match state update correctly."
+            ],
+            "expected_result": "weapon should work correctly in standard PvP combat.",
+            "id": "TC-001"
+        },
+        {
+            "title": "Verify weapon handles disconnects or lag correctly",
+            "type": "negative",
+            "priority": "high",
+            "severity": "critical",
+            "precondition": "A PvP match is active and network conditions can be varied.",
+            "steps": [
+                "Start a PvP match.",
+                "Trigger weapon during combat.",
+                "Simulate lag, packet delay, or a temporary disconnect.",
+                "Observe recovery behavior after the connection changes."
+            ],
+            "expected_result": "weapon should recover gracefully from lag or disconnect conditions.",
+            "id": "TC-002"
+        },
+        {
+            "title": "Verify weapon remains fair for both players",
+            "type": "edge case",
+            "priority": "medium",
+            "severity": "major",
+            "precondition": "A balanced PvP match is active between two valid players.",
+            "steps": [
+                "Use weapon repeatedly from both player perspectives.",
+                "Compare results, timing, and feedback on both sides.",
+                "Check whether one player gets an unfair advantage."
+            ],
+            "expected_result": "weapon should behave fairly and consistently for all players.",
+            "id": "TC-003"
+        }
+    ]
+}
