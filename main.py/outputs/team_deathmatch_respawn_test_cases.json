@@ -1,0 +1,48 @@
+{
+    "mode": "team deathmatch",
+    "feature": "respawn",
+    "test_cases": [
+        {
+            "title": "Verify respawn works during normal team deathmatch flow",
+            "type": "positive",
+            "priority": "high",
+            "severity": "critical",
+            "precondition": "A team deathmatch session has started with valid teams assigned.",
+            "steps": [
+                "Start a team deathmatch match.",
+                "Trigger or use respawn during normal gameplay.",
+                "Observe team state, UI, and gameplay flow."
+            ],
+            "expected_result": "respawn should work correctly during normal team deathmatch gameplay.",
+            "id": "TC-001"
+        },
+        {
+            "title": "Verify respawn handles respawn or score issues correctly",
+            "type": "negative",
+            "priority": "high",
+            "severity": "major",
+            "precondition": "A TDM match is active with score tracking and respawn enabled.",
+            "steps": [
+                "Use respawn before a death, kill, or respawn event.",
+                "Trigger repeated kills, deaths, or score updates.",
+                "Observe respawn logic and score behavior."
+            ],
+            "expected_result": "respawn should not break respawn logic or scoring behavior.",
+            "id": "TC-002"
+        },
+        {
+            "title": "Verify respawn remains stable under repeated kills and respawns",
+            "type": "edge case",
+            "priority": "medium",
+            "severity": "major",
+            "precondition": "Players can repeatedly enter combat and respawn in the same TDM session.",
+            "steps": [
+                "Play repeated combat loops with frequent kills and respawns.",
+                "Trigger respawn across multiple cycles.",
+                "Observe whether the feature remains stable over time."
+            ],
+            "expected_result": "respawn should remain stable across repeated combat and respawn cycles.",
+            "id": "TC-003"
+        }
+    ]
+}
